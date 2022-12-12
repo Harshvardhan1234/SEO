@@ -1,0 +1,380 @@
+{% load static %}
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Automated SEO</title>
+    <style>
+      *{
+    margin: 0px;
+    padding: 0px;
+}
+header{
+    padding: 30px;
+    margin: 20px;
+}
+header > img{
+    display: block;
+    max-width: 100px;
+    max-height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1{
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+nav{
+    border-radius: 0.5rem;
+    justify-content: center;
+    margin: 5px;
+}
+nav ul{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+}
+ul li{
+    display: inline-block;
+    position: relative;
+    padding: 15px 0;
+}
+ul li a{
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+    margin: 0 3rem; 
+    font-weight: bold;
+    font-size: 1em;
+    font-family: sans-serif;
+}
+ul li a::after{
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: rgb(0, 0, 0);
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;   
+}
+ul li a:hover::after{
+    width: 100%;
+    left: 0;
+}
+.mainContainer{
+    background-color: black;
+    padding: 20px;
+}
+.heading{
+    margin-right: auto;
+    margin-left: auto;
+    width: 50%;
+}
+.heading > h1{
+    color: white;
+}
+.heading1{
+    margin-right: auto;
+    margin-left: auto;
+    width: 50%;
+}
+.heading1 > h1{
+    color: black;
+}
+.container{
+    margin: 50px;
+}
+.container > p{
+    color: white;
+    margin-left: 50px;
+}
+.container2{
+    /* border: 2px solid white; */
+    margin: 1em 3em;
+    padding: 2em;
+    border-radius: 50px;
+    background-color: white;
+}
+.toolbox{
+    /* border: 1px solid white; */
+    margin: 5px 25px;
+}
+.toolbox > button{
+    padding: 0px;
+    margin: 5px;
+}
+.tools{
+    background-color: white;
+    border: none;
+}
+.tools > img{
+    max-width: 20px;
+    max-height: 20px;
+}
+.inputcontainer{
+    border: 2px solid rgb(35, 35, 35);
+    margin-left: 5px;
+    padding: 50px;
+    width: 100%;
+}
+textarea{
+    border: 2px solid rgb(35, 35, 35);
+    border-radius: 10px;
+    padding: 10px;
+    height: 500px;
+    width: 100%;
+}
+.inputcontainer > input{
+    width: 100%;
+    height: 500px;
+}
+.inputcontainer2{
+    border: 1px solid white;
+    margin-left: 5px;
+    padding: 20px;
+}
+.inputcontainer2 > input{
+    width: 25%;
+    height: 20px;
+    padding: 5px;
+}
+.inputcontainer2 > button{
+    padding: 5px;
+    background: white;
+    margin: 5px;
+}
+.linkContainer{
+    padding: 20px;
+    margin-left: 5px;
+}
+.learnContainer{
+    background-color: white;
+}
+.learnContainer2{
+    background-color: black;
+    margin: 100px;
+    padding: 50px;
+    border-radius: 50px;
+}
+.learnContainer2 > .heading > h1{
+    color: white;
+}
+.cards{
+    display: flex;
+    /* border: 2px solid white; */
+}
+.card{
+    padding: 30px;
+    /* border: 2px solid white; */
+    margin: 20px;
+    background-color: white;
+    border-radius: 30px;
+}
+.productContainer{
+    padding: 50px;
+    background: black;
+}
+.productContainer2{
+    margin: 100px;
+    padding: 50px;
+    background-color: white;
+    border-radius: 50px;
+}
+.productContainer3{
+    display: flex;
+}
+.productCards{
+    padding: 50px;
+    margin: 30px;
+    border-radius: 30px;
+}
+.vl {
+    border-left: 4px solid black;
+    border-radius: 2px;
+    height: 40%;
+    position:absolute;
+    left: 50%;
+}
+/* #input{ */
+    /* display: none; */
+/* } */
+input:checked + span{
+    border: 2px solid black;
+    /* display:none; */
+}
+span{
+    padding: 5px;
+}
+    </style>
+    <!-- <link rel="stylesheet" href="stylesheet.css" /> -->
+  </head>
+  <body>
+    <header>
+      <img src="/icons/logo.png" alt="" />
+    </header>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Our Products</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Help</a></li>
+        <li><a href="#">Community</a></li>
+      </ul>
+    </nav>
+    <main>
+      <div class="mainContainer">
+        <div class="heading">
+          <h1>Automated SEO</h1>
+        </div>
+        <div class="container">
+          <p>Enter the Content you want to analyse</p>
+          <div class="container2">
+            <div class="toolbox">
+              <button class="tools typeofcontent">
+                Paragraph <img src="/icons/dropDownMenu.png" alt="" />
+              </button>
+              <label class="tools bold">
+                <input type="checkbox" value="1"><span><B>B</B></span>
+             </label>
+              <label>
+                <input type="checkbox" value="1"><span><I>I</I></span>
+             </label>
+              <button class="tools unordering">
+                <img src="/icons/formallist.png" alt="" />
+              </button>
+              <button class="tools numbering">
+                <img src="/icons/numberlist.png" alt="" />
+              </button>
+              <button class="tools quotes">
+                <img src="/icons/quotes.png" alt="" />
+              </button>
+              <button class="tools alignment">tool</button>
+              <button class="tools alignmentright">tool</button>
+              <button class="tools zoom">
+                <img src="/icons/zoom.png" alt="" />
+              </button>
+            </div>
+              <textarea name="" id=""></textarea>
+            <div class="inputcontainer2">
+              <input
+                type="text"
+                placeholder="Enter the Keywords you want to analyse for "
+              /><button>Add keywords</button>
+            </div>
+            <div class="linkcontainer">
+
+            <form action="preprocess" method="post">
+                {% csrf_token %}
+              <p>Or you can easily drop the link of your website.</p>
+              <div class="inputcontainer2">
+                <input type="text" name = 'data' placeholder="Enter the link of your webpage"/>
+                <button type="submit">Analyse</button>
+
+              </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+<img src = "{% static 'country.png' %}" height="300" width="500" class="d-inline-block align-top">
+<img src = "{% static 'key_word.jpg' %}" height="300" width="500" class="d-inline-block align-top">
+
+
+      <div class="learnContainer">
+        <div class="learnContainer2">
+          <div class="heading">
+            <h1>Learn SEO</h1>
+          </div>
+          <div class="cards">
+            <div class="card card1">
+              <h2>KEY WORDS</h2>
+              {{flush}}<br>
+              <p>
+                <ul>
+                    {% for athlete in keyWord %}
+                        <li>{{ athlete }}</li>
+                    {% endfor %}
+                    </ul>
+                {% comment %} {{keyWord}} {% endcomment %}
+              </p>
+            </div>
+            <div class="card card1">
+                
+                <h2>H-TAGS</h2>
+                <p>
+                <p>
+                    No of H1 Tags :  {{ hTags.0 }}
+                </p>
+                <br><br>
+                <p>
+                    No of H1 Tags :  {{ hTags.1 }}
+                </p>
+                <br><br>
+                <p>
+                    No of H1 Tags :  {{ hTags.2 }}
+                </p>
+
+
+                
+
+                
+                
+               
+                
+              </p>
+            </div>
+            <div class="card card1">
+              <h2>META TAGS</h2>
+              <p>
+                <p>
+                    follow Tags :  {{ metaTags.0 }}
+                </p>   
+                <br><br>
+                <p>
+                    nofollow Tags :  {{ metaTags.1 }}
+                </p> 
+                
+              </p>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      <div class="productContainer">
+        <div class="productContainer2">
+          <div class="heading1">
+            <h1>Our Products</h1>
+          </div>
+          <div class="productContainer3">
+            <div class="productCards">
+              <h2>Lorem, ipsum.</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non inventore quasi ex aut cupiditate aperiam, sit rerum quod ullam! Sequi reprehenderit, totam cumque repellendus a quaerat nisi, atque consectetur animi, asperiores nobis doloremque molestias cum porro consequatur qui incidunt praesentium illo nihil officiis veniam excepturi. Non quisquam aperiam optio ex!
+                </p>
+            </div>
+            <div class="vl">
+            </div>
+            <div class="productCards">
+              <h2>Lorem, ipsum.</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non inventore quasi ex aut cupiditate aperiam, sit rerum quod ullam! Sequi reprehenderit, totam cumque repellendus a quaerat nisi, atque consectetur animi, asperiores nobis doloremque molestias cum porro consequatur qui incidunt praesentium illo nihil officiis veniam excepturi. Non quisquam aperiam optio ex!
+                </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
